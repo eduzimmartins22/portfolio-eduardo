@@ -374,7 +374,10 @@ export default function Portfolio() {
 
           {/* EM DESENVOLVIMENTO */}
           <section className="max-w-5xl mx-auto px-6 py-8 mt-4">
-           <motion.div variants={fadeUp} initial="hidden" whileInView="show" viewport={{ once: true }} custom={2}>
+            <motion.h2 variants={fadeUp} initial="hidden" whileInView="show" viewport={{ once: true }} custom={0} className="text-2xl font-semibold mb-6">
+              Em Desenvolvimento
+            </motion.h2>
+           <motion.div variants={fadeUp} initial="hidden" whileInView="show" viewport={{ once: true }} custom={1}>
             <Card className={`border ${t.inProgress} transition-colors h-full`}>
               <CardContent className="p-6 space-y-4 flex flex-col h-full">
                 <div className="flex items-center justify-between">
@@ -405,7 +408,7 @@ export default function Portfolio() {
               </CardContent>
             </Card>
           </motion.div>
-            <div className="grid md:grid-cols-2 gap-6">
+            <div className="grid md:grid-cols-2 gap-6 mt-6">
               <motion.div variants={fadeUp} initial="hidden" whileInView="show" viewport={{ once: true }} custom={1}>
                 <Card className={`border ${t.inProgress} transition-colors h-full`}>
                   <CardContent className="p-6 space-y-4 flex flex-col h-full">
@@ -425,29 +428,6 @@ export default function Portfolio() {
                     </p>
                     <div className="flex flex-wrap gap-2">
                       {["Flutter", "Dart", "Educativo", "Música", "Em breve"].map((tag) => (
-                        <span key={tag} className={`text-xs px-2 py-0.5 rounded-full ${t.tag} opacity-50`}>{tag}</span>
-                      ))}
-                    </div>
-                  </CardContent>
-                </Card>
-              </motion.div>
-
-              <motion.div variants={fadeUp} initial="hidden" whileInView="show" viewport={{ once: true }} custom={2}>
-                <Card className={`border ${t.inProgress} transition-colors h-full`}>
-                  <CardContent className="p-6 space-y-4 flex flex-col h-full">
-                    <div className="flex items-center justify-between">
-                      <div className="flex items-center gap-2">
-                        <ShoppingCart size={14} className="text-amber-500" />
-                        <span className="text-xs text-amber-500 font-medium uppercase tracking-wider">E-commerce</span>
-                      </div>
-                      <span className={`text-xs border px-2 py-0.5 rounded-full ${t.wipBadge}`}>Em processo</span>
-                    </div>
-                    <h3 className="text-lg font-semibold">E-commerce de Tênis</h3>
-                    <p className={`${t.textMuted} text-base leading-relaxed flex-1`}>
-                      Loja virtual especializada em tênis, com design moderno e experiência de compra fluida.
-                    </p>
-                    <div className="flex flex-wrap gap-2">
-                      {["Next.js", "Tailwind", "Em breve"].map((tag) => (
                         <span key={tag} className={`text-xs px-2 py-0.5 rounded-full ${t.tag} opacity-50`}>{tag}</span>
                       ))}
                     </div>
