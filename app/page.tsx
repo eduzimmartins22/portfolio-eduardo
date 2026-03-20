@@ -19,14 +19,16 @@ const fadeUp: Variants = {
 };
 
 const skills = [
-  { name: "React", level: 90 },
-  { name: "Next.js", level: 85 },
-  { name: "TypeScript", level: 80 },
+  { name: "React", level: 80 },
+  { name: "Next.js", level: 80 },
+  { name: "TypeScript", level: 90 },
   { name: "JavaScript", level: 90 },
   { name: "Tailwind CSS", level: 85 },
-  { name: "HTML & CSS", level: 95 },
-  { name: "Python", level: 60 },
-  { name: "SQL", level: 65 },
+  { name: "HTML & CSS", level: 80 },
+  { name: "Python", level: 80 },
+  { name: "SQL", level: 100 },
+  { name: "Flutter", level: 75 },
+  { name: "IOT", level: 90 },
 ];
 
 export default function Portfolio() {
@@ -116,7 +118,7 @@ export default function Portfolio() {
               performáticas e focadas na experiência do usuário.
               Experiência real com e-commerce, landing pages, sistemas IoT e apps mobile.
               Sempre buscando inovação, usabilidade e código limpo.
-              
+
             </motion.p>
 
             <motion.div
@@ -140,11 +142,11 @@ export default function Portfolio() {
               <h2 className="text-2xl font-semibold mb-4">Sobre mim</h2>
               <p className={`${t.textMuted} leading-relaxed text-lg`}>
                 Sou desenvolvedor frontend com experiência em projetos reais para clientes,
-                atuando na criação de interfaces modernas, responsivas e funcionais.
+                atuando na criação de interfaces modernas, responsivas e funcionais freelancer e contratos PJ.
               </p>
               <p className={`${t.textMuted} leading-relaxed text-lg mt-4`}>
                 Já desenvolvi e-commerces, landing pages, sistemas integrados com IoT e
-                aplicativos mobile com Flutter, sempre focando em performance, usabilidade e código limpo.
+                aplicativos mobile com Flutter, sempre focando em performance, usabilidade e experiência do usuário.
               </p>
             </motion.div>
 
