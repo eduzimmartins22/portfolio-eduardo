@@ -50,7 +50,7 @@ export function InProgress({ t }: InProgressProps) {
       </motion.div>
 
       {/* Escalas Musicais */}
-      <div className="grid md:grid-cols-2 gap-6 mt-6">
+      <div className="max-w-5xl mx-auto px-6 py-8 mt-4">
         <motion.div variants={fadeUp} initial="hidden" whileInView="show" viewport={{ once: true }} custom={1}>
           <Card className={`border ${t.inProgress} transition-colors h-full`}>
             <CardContent className="p-6 space-y-4 flex flex-col h-full">
