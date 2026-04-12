@@ -1,7 +1,7 @@
 "use client";
 import { motion } from "framer-motion";
 import { Card, CardContent } from "@/components/ui/card";
-import { ShoppingCart, Smartphone } from "lucide-react";
+import { ShoppingCart } from "lucide-react";
 import { Theme, fadeUp } from "../../theme";
 
 type InProgressProps = { t: Theme };
@@ -49,34 +49,7 @@ export function InProgress({ t }: InProgressProps) {
         </Card>
       </motion.div>
 
-      {/* Escalas Musicais */}
-      <div className="max-w-5xl mx-auto px-6 py-8 mt-4">
-        <motion.div variants={fadeUp} initial="hidden" whileInView="show" viewport={{ once: true }} custom={1}>
-          <Card className={`border ${t.inProgress} transition-colors h-full`}>
-            <CardContent className="p-6 space-y-4 flex flex-col h-full">
-              <div className="flex items-center justify-between">
-                <div className="flex items-center gap-2">
-                  <Smartphone size={14} className="text-amber-500" />
-                  <span className="text-xs text-amber-500 font-medium uppercase tracking-wider">App Mobile</span>
-                </div>
-                <span className={`text-xs border px-2 py-0.5 rounded-full ${t.wipBadge}`}>Em processo</span>
-              </div>
-              <h3 className="text-lg font-semibold">Escalas Musicais — Flauta para Iniciantes</h3>
-              <p className={`${t.textMuted} text-base leading-relaxed flex-1`}>
-                App educativo para aprender, praticar e testar conhecimentos sobre escalas musicais
-                maiores e menores. Jogo interativo onde o usuário monta escalas, recebe feedback
-                imediato, acessa dicas de teoria musical e explora relações entre escalas.
-                Em breve como curso de flauta para iniciantes.
-              </p>
-              <div className="flex flex-wrap gap-2">
-                {["Flutter", "Dart", "Educativo", "Música", "Em breve"].map((tag) => (
-                  <span key={tag} className={`text-xs px-2 py-0.5 rounded-full ${t.tag} opacity-50`}>{tag}</span>
-                ))}
-              </div>
-            </CardContent>
-          </Card>
-        </motion.div>
-      </div>
+
     </section>
   );
 }
