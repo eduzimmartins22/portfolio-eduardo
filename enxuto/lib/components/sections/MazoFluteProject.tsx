@@ -44,7 +44,7 @@ export function MazoFluteProject({ t }: MazoFluteProjectProps) {
         viewport={{ once: true }}
         custom={1}
       >
-        <Card className={`relative overflow-hidden border-2 ${t.card} transition-all hover:shadow-lg hover:border-blue-500/30`}>
+        <Card className={`relative overflow-hidden border-2 ${t.bgCard} transition-all hover:shadow-lg hover:border-blue-500/30`}>
           <div className="absolute inset-0 opacity-40 bg-gradient-to-br from-blue-500/5 via-transparent to-amber-500/5" />
 
           <CardContent className="p-8 space-y-8 relative z-10">
