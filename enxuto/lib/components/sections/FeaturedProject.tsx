@@ -11,14 +11,22 @@ type FeaturedProjectProps = { t: Theme };
 export function FeaturedProject({ t }: FeaturedProjectProps) {
   return (
     <section id="projetos" className="max-w-5xl mx-auto px-6 py-8">
-      <motion.h2
-        variants={fadeUp} initial="hidden" whileInView="show" viewport={{ once: true }} custom={0}
-        className="text-2xl font-semibold mb-6"
-      >
-        Projeto em Destaque
-      </motion.h2>
 
-      <motion.div variants={fadeUp} initial="hidden" whileInView="show" viewport={{ once: true }} custom={1}>
+      {/* Divisor */}
+      <div className={`w-16 h-px mb-10 ${t.barFill}`} />
+
+      <motion.p
+        variants={fadeUp} initial="hidden" whileInView="show"
+        viewport={{ once: true }} custom={0}
+        className={`text-sm uppercase tracking-widest font-medium ${t.textFaint} mb-6`}
+      >
+        Projeto em destaque
+      </motion.p>
+
+      <motion.div
+        variants={fadeUp} initial="hidden" whileInView="show"
+        viewport={{ once: true }} custom={1}
+      >
         <Card className={`${t.bgCard} border ${t.border} ${t.bgCardHov} transition-colors overflow-hidden`}>
           <CardContent className="p-0">
             <div className="flex flex-col md:flex-row">
@@ -38,9 +46,8 @@ export function FeaturedProject({ t }: FeaturedProjectProps) {
                 </div>
                 <h3 className="text-xl font-semibold">Casa Inteligente (IoT)</h3>
                 <p className={`${t.textMuted} text-base leading-relaxed`}>
-                  Sistema de automação residencial com controle em tempo real,
-                  permitindo gerenciar dispositivos como luzes, fumaça e bomba de água.
-                  Integração com ESP8266 via rede Wi-Fi.
+                  Sistema de automação residencial com controle em tempo real —
+                  luzes, detecção de fumaça e bomba de água via ESP8266 e Wi-Fi.
                 </p>
                 <div className="flex flex-wrap gap-2 pt-1">
                   {["React", "ESP8266", "Web Server", "IoT"].map((tag) => (
@@ -50,7 +57,7 @@ export function FeaturedProject({ t }: FeaturedProjectProps) {
                 <div className="flex gap-2 pt-1">
                   <a href="https://github.com/eduzimmartins22/Casa-Inteligente-" target="_blank">
                     <Button size="sm" variant="outline" className={`${t.btnOutline} text-xs`}>
-                      <Github size={13} className="mr-1" /> Código
+                      <Github size={13} className="mr-1" /> Ver código
                     </Button>
                   </a>
                 </div>

@@ -3,6 +3,7 @@ import { motion } from "framer-motion";
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Music, ArrowRight, Sparkles } from "lucide-react";
+import Image from "next/image";
 import { Theme, fadeUp } from "../../theme";
 
 type LaunchedCourseProps = { t: Theme };
@@ -11,11 +12,8 @@ export function LaunchedCourse({ t }: LaunchedCourseProps) {
   return (
     <section id="course" className="max-w-5xl mx-auto px-6 py-12 mt-8">
       <motion.div
-        variants={fadeUp}
-        initial="hidden"
-        whileInView="show"
-        viewport={{ once: true }}
-        custom={0}
+        variants={fadeUp} initial="hidden" whileInView="show"
+        viewport={{ once: true }} custom={0}
         className="mb-8"
       >
         <div className="flex items-center gap-3 mb-2">
@@ -27,106 +25,76 @@ export function LaunchedCourse({ t }: LaunchedCourseProps) {
             <Sparkles className="text-yellow-400 animate-pulse" size={20} />
           </div>
         </div>
-        <p className={`${t.textMuted} text-sm ml-12`}>Seu novo curso para iniciantes em flauta</p>
+        <p className={`${t.textMuted} text-sm ml-12`}>Curso para iniciantes em flauta transversa</p>
       </motion.div>
 
       <motion.div
-        variants={fadeUp}
-        initial="hidden"
-        whileInView="show"
-        viewport={{ once: true }}
-        custom={1}
+        variants={fadeUp} initial="hidden" whileInView="show"
+        viewport={{ once: true }} custom={1}
       >
-        <Card
-          className={`relative overflow-hidden border-2 ${t.inProgress} bg-gradient-to-br transition-all hover:shadow-lg hover:border-green-500/40`}
-        >
-          {/* Gradiente decorativo de fundo */}
+        <Card className={`relative overflow-hidden border-2 ${t.inProgress} bg-gradient-to-br transition-all hover:shadow-lg hover:border-green-500/40`}>
           <div className="absolute inset-0 opacity-50 bg-gradient-to-r from-green-500/5 via-transparent to-green-500/5" />
 
-          <CardContent className="p-8 space-y-6 relative z-10">
-            {/* Header com badge */}
-            <div className="flex items-start justify-between">
-              <div className="space-y-2 flex-1">
+          <CardContent className="p-0 relative z-10">
+            <div className="flex flex-col md:flex-row">
+
+              {/* Foto da flauta */}
+              <div className="md:w-56 flex-shrink-0 overflow-hidden rounded-tl-xl rounded-bl-xl">
+                <Image
+                  src="/images/flauta.jpg"
+                  alt="Eduardo tocando flauta"
+                  width={400}
+                  height={500}
+                  className="w-full h-56 md:h-full object-cover object-top"
+                />
+              </div>
+
+              {/* Conteúdo */}
+              <div className="p-8 space-y-5 flex-1">
                 <div className="flex items-center gap-3 flex-wrap">
                   <h3 className="text-2xl font-bold">Flauta para Iniciantes</h3>
-                  <span
-                    className={`inline-flex items-center gap-1.5 text-xs px-3 py-1 rounded-full font-semibold ${t.wipBadge} bg-green-500/15 text-green-400 border-green-500/30`}
-                  >
+                  <span className={`inline-flex items-center gap-1.5 text-xs px-3 py-1 rounded-full font-semibold bg-green-500/15 text-green-400 border border-green-500/30`}>
                     <span className="w-1.5 h-1.5 rounded-full bg-green-400 animate-pulse" />
                     LANÇADO
                   </span>
                 </div>
+
+                <p className={`${t.textMuted} text-base leading-relaxed`}>
+                  App educativo com gamificação para aprender escalas musicais maiores e menores.
+                  Feedback imediato, teoria musical e progressão estruturada. Ideal para quem
+                  está começando do zero na flauta.
+                </p>
+
+                <div className="grid sm:grid-cols-2 gap-2">
+                  {[
+                    { ico: "🎵", txt: "Escalas maiores e menores" },
+                    { ico: "🎮", txt: "Jogo interativo com gamificação" },
+                    { ico: "⚡", txt: "Feedback imediato" },
+                    { ico: "📚", txt: "Teoria musical completa" },
+                  ].map(({ ico, txt }) => (
+                    <div key={txt} className="flex items-center gap-2">
+                      <span className="text-base">{ico}</span>
+                      <span className={`${t.textMuted} text-sm`}>{txt}</span>
+                    </div>
+                  ))}
+                </div>
+
+                <div className="flex flex-wrap gap-2">
+                  {["Flutter", "Dart", "Educativo", "Música", "Gamificação"].map((tag) => (
+                    <span key={tag} className={`text-xs px-3 py-1 rounded-full ${t.tag}`}>{tag}</span>
+                  ))}
+                </div>
+
+                <a href="https://pay.kiwify.com.br/QVTc7tn" target="_blank" className="block">
+                  <Button className={`font-semibold ${t.btnPrimary} border-0 h-11 text-base`}>
+                    Acessar o Curso <ArrowRight className="ml-2" size={18} />
+                  </Button>
+                </a>
+
+                <p className={`text-xs ${t.textFaint} border-l-2 border-green-500/30 pl-3`}>
+                  🚀 <strong>Disponível agora</strong> — acesso imediato com suporte e atualizações contínuas.
+                </p>
               </div>
-            </div>
-
-            {/* Descrição detalhada */}
-            <div className="space-y-4">
-              <p className={`${t.textMuted} text-base leading-relaxed`}>
-                Um app educativo completo para aprender, praticar e testar seus conhecimentos sobre
-                escalas musicais maiores e menores. Agora em um curso estruturado com gamificação, feedback
-                imediato e dicas de teoria musical. Ideal para iniciantes que desejam dominar as fundações
-                da música através da flauta.
-              </p>
-
-              {/* Pontos-chave do curso */}
-              <div className="grid md:grid-cols-2 gap-3 pt-2">
-                <div className="flex items-start gap-2">
-                  <span className={`text-lg ${t.accent} flex-shrink-0`}>🎵</span>
-                  <span className={`${t.textMuted} text-sm`}>Aprenda escalas maiores e menores</span>
-                </div>
-                <div className="flex items-start gap-2">
-                  <span className={`text-lg ${t.accent} flex-shrink-0`}>🎮</span>
-                  <span className={`${t.textMuted} text-sm`}>Jogo interativo com gamificação</span>
-                </div>
-                <div className="flex items-start gap-2">
-                  <span className={`text-lg ${t.accent} flex-shrink-0`}>⚡</span>
-                  <span className={`${t.textMuted} text-sm`}>Feedback imediato e instantâneo</span>
-                </div>
-                <div className="flex items-start gap-2">
-                  <span className={`text-lg ${t.accent} flex-shrink-0`}>📚</span>
-                  <span className={`${t.textMuted} text-sm`}>Dicas e teoria musical completa</span>
-                </div>
-              </div>
-            </div>
-
-            {/* Tags de tecnologia */}
-            <div className="flex flex-wrap gap-2">
-              {["Flutter", "Dart", "Educativo", "Música", "Gamificação"].map((tag) => (
-                <span key={tag} className={`text-xs px-3 py-1 rounded-full ${t.tag}`}>
-                  {tag}
-                </span>
-              ))}
-            </div>
-
-            {/* Botões de ação */}
-            <div className="flex flex-col sm:flex-row gap-3 pt-2">
-              <a href="https://pay.kiwify.com.br/QVTc7tn" target="_blank" className="flex-1">
-                <Button className={`w-full font-semibold ${t.btnPrimary} border-0 h-11 text-base`}>
-                  Acessar o Curso <ArrowRight className="ml-2" size={18} />
-                </Button>
-              </a>
-              <Button
-                variant="outline"
-                className={`${t.btnOutline} font-semibold`}
-                onClick={() => {
-                  const courseSection = document.getElementById("course");
-                  if (courseSection) {
-                    courseSection.scrollIntoView({ behavior: "smooth" });
-                  }
-                }}
-              >
-                Saiba Mais
-              </Button>
-            </div>
-
-            {/* Nota sobre disponibilidade */}
-            <div
-              className={`text-xs ${t.textFaint} border-l-2 ${t.accent} border-opacity-30 pl-3 py-2`}
-            >
-              <p>
-                🚀 <strong>Disponível agora!</strong> Acesso imediato ao conteúdo completo com suporte
-                e atualizações contínuas.
-              </p>
             </div>
           </CardContent>
         </Card>
