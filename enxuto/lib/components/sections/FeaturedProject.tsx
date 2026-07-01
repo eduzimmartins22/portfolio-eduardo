@@ -42,12 +42,13 @@ export function FeaturedProject({ t }: FeaturedProjectProps) {
               <div className="p-6 space-y-3 flex flex-col justify-center">
                 <div className="flex items-center gap-2">
                   <Wifi size={16} className={t.accent} />
-                  <span className={`text-xs font-medium uppercase tracking-wider ${t.accent}`}>Destaque</span>
+                  <span className={`text-xs font-medium uppercase tracking-wider ${t.accent}`}>Projeto em destaque</span>
                 </div>
                 <h3 className="text-xl font-semibold">Casa Inteligente (IoT)</h3>
                 <p className={`${t.textMuted} text-base leading-relaxed`}>
                   Sistema de automação residencial com controle em tempo real —
                   luzes, detecção de fumaça e bomba de água via ESP8266 e Wi-Fi.
+                  Mais segurança e economia de energia com acesso de qualquer lugar.
                 </p>
                 <div className="flex flex-wrap gap-2 pt-1">
                   {["React", "ESP8266", "Web Server", "IoT"].map((tag) => (

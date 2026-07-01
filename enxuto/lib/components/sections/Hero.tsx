@@ -21,7 +21,7 @@ export function Hero({ t }: HeroProps) {
             transition={{ duration: 0.5 }}
           >
             <span className={`inline-block text-xs font-medium border px-3 py-1 rounded-full ${t.badge}`}>
-              🌿 Disponível para projetos e contratos
+              🌿 Disponível para novos projetos — respondo em até 24h
             </span>
           </motion.div>
 
@@ -45,9 +45,10 @@ export function Hero({ t }: HeroProps) {
             transition={{ delay: 0.2 }}
             className={`${t.textMuted} text-lg leading-relaxed max-w-md`}
           >
-            Transformo ideias em interfaces que funcionam de verdade —
+            Ajudo negócios a lançar sites e apps que realmente convertem —
             com React, TypeScript e atenção aos detalhes que fazem a diferença
-            entre um projeto comum e um produto que as pessoas querem usar.
+            entre um projeto comum e um produto que os clientes usam de verdade.
+            Já entreguei e-commerces, apps mobile e sistemas web para clientes reais.
           </motion.p>
 
           <motion.div

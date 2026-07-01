@@ -32,7 +32,8 @@ export function WebProjects({ t }: WebProjectsProps) {
               </div>
               <h3 className="text-lg font-semibold">Ugo Celulares</h3>
               <p className={`${t.textMuted} text-base leading-relaxed flex-1`}>
-                E-commerce completo para cliente real, com foco em conversão e experiência do usuário.
+                E-commerce completo para cliente real, do catálogo ao checkout, construído
+                com foco em conversão, velocidade de carregamento e experiência do usuário.
               </p>
               <div className="flex flex-wrap gap-2">
                 {["React", "Tailwind", "API"].map((tag) => (
@@ -68,7 +69,8 @@ export function WebProjects({ t }: WebProjectsProps) {
               </div>
               <h3 className="text-lg font-semibold">Buzz Digital</h3>
               <p className={`${t.textMuted} text-base leading-relaxed flex-1`}>
-                Landing page para cliente de marketing digital, com foco em conversão e captação de leads.
+                Landing page de alta conversão para cliente de marketing digital,
+                pensada para transformar visitantes em leads qualificados.
               </p>
               <div className="flex flex-wrap gap-2">
                 {["React", "Tailwind"].map((tag) => (

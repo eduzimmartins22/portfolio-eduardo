@@ -6,39 +6,30 @@ import { Hero } from "../enxuto/lib/components/sections/Hero";
 import { About } from "../enxuto/lib/components/sections/About";
 import { FeaturedProject } from "../enxuto/lib/components/sections/FeaturedProject";
 import { WebProjects } from "../enxuto/lib/components/sections/WebProject";
-import { MobileApps } from "../enxuto/lib/components/sections/MobileApps";
-import { LaunchedCourse } from "../enxuto/lib/components/sections/LaunchedCourse";
 import { MazoFluteProject } from "../enxuto/lib/components/sections/MazoFluteProject";
+import { LaunchedCourse } from "../enxuto/lib/components/sections/LaunchedCourse";
+import { MobileApps } from "../enxuto/lib/components/sections/MobileApps";
 import { InProgress } from "../enxuto/lib/components/sections/InProgress";
 import { Contact } from "../enxuto/lib/components/sections/Contact";
 
-export default function Portfolio() {
+export default function Home() {
   const [dark, setDark] = useState(true);
   const t = getTheme(dark);
 
   return (
-    <>
-      <style>{`
-        @import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Crimson+Pro:wght@300;400;500&display=swap');
-        * { font-family: 'Crimson Pro', Georgia, serif; }
-        h1, h2, h3, nav span { font-family: 'Lora', Georgia, serif; }
-      `}</style>
-
-      <div className={`min-h-screen ${t.bg} ${t.text} transition-colors duration-500`}>
-        <Navbar t={t} dark={dark} setDark={setDark} />
-
-        <div className="pt-14">
-          <Hero t={t} />
-          <About t={t} />
-          <FeaturedProject t={t} />
-          <WebProjects t={t} />
-          <MobileApps t={t} />
-          <LaunchedCourse t={t} />
-          <MazoFluteProject t={t} />
-          <InProgress t={t} />
-          <Contact t={t} />
-        </div>
+    <main className={`min-h-screen ${t.bg} ${t.text} transition-colors duration-500`}>
+      <Navbar t={t} dark={dark} setDark={setDark} />
+      <div className="pt-14">
+        <Hero t={t} />
+        <About t={t} />
+        <FeaturedProject t={t} />
+        <WebProjects t={t} />
+        <MazoFluteProject t={t} />
+        <LaunchedCourse t={t} />
+        <MobileApps t={t} />
+        <InProgress t={t} />
+        <Contact t={t} />
       </div>
-    </>
+    </main>
   );
 }

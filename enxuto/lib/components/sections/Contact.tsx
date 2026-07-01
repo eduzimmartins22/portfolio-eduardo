@@ -23,12 +23,13 @@ export function Contact({ t }: ContactProps) {
           <h2 className="text-3xl font-semibold">Vamos trabalhar juntos?</h2>
           <p className={`${t.textMuted} text-lg leading-relaxed`}>
             Estou disponível para projetos freelance, contratos PJ e oportunidades de
-            colaboração. Se você tem uma ideia ou um problema para resolver, me conta.
+            colaboração. Se você tem uma ideia ou um problema para resolver, me conta —
+            respondo em até 24h.
           </p>
           <a href="https://wa.me/5527997475627" target="_blank">
             <Button className={`${t.btnPrimary} font-semibold px-6 border-0 mt-2`}>
               <MessageCircle className="mr-2" size={16} />
-              Falar no WhatsApp
+              Falar no WhatsApp agora
             </Button>
           </a>
         </div>

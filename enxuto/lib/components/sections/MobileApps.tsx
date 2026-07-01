@@ -134,8 +134,9 @@ export function MobileApps({ t }: MobileAppsProps) {
               </div>
               <h3 className="text-lg font-semibold">ISAAC — Suporte Técnico</h3>
               <p className={`${t.textMuted} text-base leading-relaxed flex-1`}>
-                App de chamados para manutenção com perfis de cliente e técnico.
-                Abertura de chamados por tópicos, rastreamento via Google Maps e status em tempo real.
+                App de chamados para manutenção que elimina a bagunça de WhatsApp e planilhas —
+                abertura de chamados por tópicos, rastreamento via Google Maps e status em tempo real
+                para cliente e técnico.
               </p>
               <div className="flex flex-wrap gap-2">
                 {["Flutter", "Google Maps", "WhatsApp API", "Geolocalização"].map((tag) => (
@@ -170,8 +171,9 @@ export function MobileApps({ t }: MobileAppsProps) {
               </div>
               <h3 className="text-lg font-semibold">Tio Jonas — Controle de Cortes</h3>
               <p className={`${t.textMuted} text-base leading-relaxed flex-1`}>
-                Gestão de pacotes de cortes para barbearia. O cabeleireiro cadastra
-                clientes e pacotes; o cliente confirma o uso de cada serviço com barra visual de progresso.
+                Gestão de pacotes de cortes que acaba com o controle manual da barbearia.
+                O barbeiro cadastra clientes e pacotes; o cliente acompanha o uso de cada
+                serviço com uma barra visual de progresso.
               </p>
               <div className="flex flex-wrap gap-2">
                 {["Flutter", "Firebase", "Gestão de Pacotes"].map((tag) => (

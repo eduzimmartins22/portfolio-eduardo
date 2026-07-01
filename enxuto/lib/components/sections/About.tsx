@@ -29,20 +29,23 @@ export function About({ t }: AboutProps) {
           <h2 className="text-2xl font-semibold">Sobre mim</h2>
 
           <p className={`${t.textMuted} leading-relaxed text-base`}>
-            Tenho 21 anos e sou desenvolvedor Frontend com experiência real em projetos
-            para clientes — e-commerces, landing pages, sistemas IoT e plataformas web
-            completas. Atuo como freelancer e em contratos PJ.
+            Tenho 21 anos e sou desenvolvedor Frontend com mais de 10 projetos entregues
+            para clientes reais — e-commerces, landing pages, sistemas IoT e plataformas web
+            completas, do primeiro código até o deploy em produção. Atuo como freelancer e
+            em contratos PJ.
           </p>
 
           <p className={`${t.textMuted} leading-relaxed text-base`}>
             Fora do código, toco flauta transversa há mais de 10 anos e já formei
-            mais de 20 alunos. Essa experiência me ensinou a comunicar ideias com
-            clareza — o que faz toda diferença quando trabalho com clientes.
+            mais de 20 alunos. Essa experiência me ensinou a ouvir a necessidade do outro
+            e comunicar ideias com clareza — o que faz toda diferença quando traduzo o
+            pedido de um cliente em um produto funcional.
           </p>
 
           <p className={`${t.textMuted} leading-relaxed text-base`}>
-            Gosto de projetos que resolvem problemas reais. Cada linha de código
-            que escrevo existe por uma razão prática.
+            Gosto de projetos que resolvem problemas reais e geram resultado mensurável.
+            Cada linha de código que escrevo existe por uma razão prática — não por estar
+            na moda.
           </p>
         </motion.div>
 
